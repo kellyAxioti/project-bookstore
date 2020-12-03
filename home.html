@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styling/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body onhashchange = "showSavedCart()">
+  <div class="grid-container">
+    <div id="overlay">
+      <button id="close-cart" onclick="off()">Close</button>
+      <div id="text"><hr>Your Cart<hr>
+        <div id="empty-txt">No items in cart yet.</div>
+        <div class="cart-container">
+          <ul class="cart-list"></ul>
+          <div class="total-price"><hr>Total Price:
+            <p id="total-price">0</p><hr>
+            <button id="buy" style="display: none;" >Buy</button>
+          </div>
+          
+      </div>
+      </div>
+   </div>
+     <div class="overlay-cart">
+        <div class="overlay"> 
+            <!-- close button nav -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            
+            
+                <div class="overlay-content">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li> <a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="nav">
+            <span class="burger" id="burger" onclick="openNav()">&#9776;</span>
+            <div class="desk-nav">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            </div>
+            <span class="cart" onclick="on()">Cart<i class="fas fa-shopping-cart"></i></span>
+        </div>
+        
+    </div>
+        <div class="main">
+            <div class="welcome-img">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="images/books-1.jpg">
+                    <source media="(max-width: 768px)" srcset="images/books.jpg">
+                    <img src="./images/books-1.jpg" alt="books" height="500" width="100%" >
+                </picture>
+                
+            </div>
+            <section>
+              <h1><span>WELCOME</span></h1>
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum at veritatis accusamus dignissimos architecto reiciendis voluptas. Placeat aspernatur, aliquid quibusdam assumenda eaque perferendis totam libero, sit facere quidem harum tempore.</h2>
+           </section> 
+           <div class="welcome-txt">
+             <section>
+                <h1><span>HIGHLY RECOMMENDED BOOKS</span></h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quis repellat natus minus totam doloribus suscipit delectus odio quas asperiores debitis dicta est vel tenetur facere ipsa voluptatibus cupiditate veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas, odit cupiditate quis nisi nemo! Vel voluptate iure, in ipsa veniam libero mollitia eum nobis dolore aut tempore cumque autem!
+                Enim hic est nesciunt incidunt? Quo nulla vero tenetur magni quaerat optio odio? Eaque aut magnam sint ea ullam beatae veniam, eos iure omnis quia nihil eum inventore mollitia labore.Labore soluta nobis assumenda non ea, similique ipsum tempore perferendis ipsam porro excepturi dolorum! Aliquam cupiditate assumenda animi, deserunt voluptate, vel possimus ipsa delectus totam ut repellat! Officiis, debitis quae.
+                </p>
+             </section>   
+                
+            </div>
+
+           
+                <div class="book">
+                  <div class="cover">
+                    <img src="images/0.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">Invisible Man<br>
+                      <span class="author">Ralph Ellison</span></p>
+                  </div>
+                </div>
+                <div class="book">
+                  <div class="cover">
+                    <img src="images/1.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">Pride and Prejudice<br>
+                      <span class="author">Jane Austen</span></p>
+                  </div>
+                </div>
+                <div class="book">
+                  <div class="cover">
+                    <img src="images/2.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">To kill a mockingbird</br>
+                      <span class="author">Harrer Lee</span></p>
+                  </div>
+                </div>
+                <div class="book">
+                  <div class="cover">
+                    <img src="images/3jpg.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">1984</br>
+                      <span class="author">George Orwell</span></p>
+                  </div>
+                </div>
+          <div class="book">
+                  <div class="cover">
+                    <img src="images/4.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">The Great Gatsby</br>
+                      <span class="author">F. Scott Fitzgerald</span></p>
+                  </div>
+                </div>
+          <div class="book">
+                  <div class="cover">
+                    <img src="images/5.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">Wuthering Heighs</br>
+                      <span class="author">Emily Bronte</span></p>
+                  </div>
+                </div>
+          <div class="book">
+                  <div class="cover">
+                    <img src="images/6.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">The Book Thief</br>
+                      <span class="author">Marcus Zusac</span></p>
+                  </div>
+                </div>
+          <div class="book">
+                  <div class="cover">
+                    <img src="images/7.jpg">
+                  </div>
+                  <div class="description">
+                    <p class="title">Crime and Punishment</br>
+                      <span class="author">Fyodor Dostoyevsky</span></p>
+                  </div>
+                </div>
+          
+            <div class="book">
+                <div class="cover">
+                  <img src="images/8.jpg">
+                </div>
+                <div class="description">
+                  <p class="title">The Lord of the Rings</br>
+                    <span class="author">J.R.R Tolkien</span></p>
+                </div>
+              </div>
+              <div class="book">
+                <div class="cover">
+                  <img src="images/9.jpg">
+                </div>
+                <div class="description">
+                  <p class="title">Jane Eyre</br>
+                    <span class="author">Charlotte Bronte</span></p>
+                </div>
+              </div> 
+              <section>
+              <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis maxime magni dignissimos ea expedita obcaecati aut quo illo culpa, quasi voluptas voluptatum odit, sunt adipisci itaque asperiores praesentium aliquam quas?</h3>
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quis repellat natus minus totam doloribus suscipit delectus odio quas asperiores debitis dicta est vel tenetur facere ipsa voluptatibus cupiditate veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias tenetur laboriosam, optio, voluptatibus facilis corporis ducimus cum neque nostrum harum! Facere tempore quod cumque veniam aliquam, est ipsum dignissimos.Aspernatur dolorum expedita totam, sapiente voluptatem culpa veniam optio ipsa provident sit nemo aut voluptatibus dolorem eaque nulla officiis, non fugiat quod unde. Dignissimos labore temporibus ratione? Necessitatibus, vitae placeat?</p>
+           <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quis repellat natus minus totam doloribus suscipit delectus odio quas asperiores debitis dicta est vel tenetur facere ipsa voluptatibus cupiditate veritatis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptas, odit cupiditate quis nisi nemo! Vel voluptate iure, in ipsa veniam libero mollitia eum nobis dolore aut tempore cumque autem!
+            Enim hic est nesciunt incidunt? Quo nulla vero tenetur magni quaerat optio odio? Eaque aut magnam sint ea ullam beatae veniam, eos iure omnis quia nihil eum inventore mollitia labore.Labore soluta nobis assumenda non ea, similique ipsum tempore perferendis ipsam porro excepturi dolorum! Aliquam cupiditate assumenda animi, deserunt voluptate, vel possimus ipsa delectus totam ut repellat! Officiis, debitis quae.
+            </p>
+          </section>
+           </div>  
+         
+      </div>
+   
+      <script src="js/app2.js"></script>
+</body>
+</html>

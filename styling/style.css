@@ -1,0 +1,285 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav nav nav nav"
+      "main main main main"
+      "main main main main";
+  }
+  .nav { grid-area: nav; }
+  .main { grid-area: main; }
+.nav {
+  overflow: hidden;
+  background-color:#f2f2f2 ;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav a {
+    float: left;
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  #burger{
+    display: none;
+    float: left;
+   
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .nav a:hover {
+    background:black;
+    color: #ddd ;
+  }
+  .cart{
+      margin-top: 5px;
+      float: right;
+      cursor: pointer;
+      padding: 8px;
+    
+  }
+  h1 {
+   
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 35px 0 20px; 
+ } 
+ 
+ h1 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }  
+ .welcome-txt p{
+    margin-left: 10px;
+ }
+
+ /* list of books */
+ .book {
+    display: inline-block;
+    width: 230px;
+    height: 390px;
+    box-shadow: 0 0 20px #aaa;
+    margin: 25px;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    transition: height 1s;
+  }
+
+  
+  .cover {
+    border: 2px solid gray;
+    height: 80%;
+    overflow: hidden;
+  }
+  
+  .cover img {
+    width: 100%;
+  }
+  
+  .book p {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  
+  .book .author {
+    font-size: 15px;
+  }
+  .book .summary {
+    font-size: 15px;
+  }
+
+  .burger{
+    font-size:60px;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------- */
+
+.overlay{
+    height: 100%;
+    width:  0;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top:0;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top:30px;
+}
+.overlay-content li{
+    list-style-type: none;
+}
+.overlay-content a{
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    transition: 0.3s;
+    padding:8px;
+}
+.overlay-content a:hover , .overlay-content a:focus{
+  color: #f1f1f1;
+}
+.closebtn{
+    position: absolute; 
+    top:20px;
+    left:0;
+    
+    font-size: 60px;
+    text-decoration: none;
+    color: #818181;;
+}
+.closebtn:hover{
+    color: #f1f1f1;
+}
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+#text{
+ 
+  padding: 15px 32px;
+  text-align: center;
+  
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  top: 10%;
+  left: 50%;
+  font-size: 30px;
+  color: white;
+ 
+}
+#empty-txt{
+  padding: 15px 32px;
+  text-align: center;
+  
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  top: 10%;
+  left: 50%;
+  font-size: 20px;
+  color: rgb(145, 5, 5);
+}
+.cart-container{
+  padding: 15px 32px;
+  text-align: center;
+  
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  top: 10%;
+  left: 50%;
+  font-size: 15px;
+  color: white;
+  
+
+}
+#close-cart{
+  background-color: #e7e7e7; 
+  color: black;
+ 
+  border: none;
+  
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right; ;
+}
+#buy{
+  background-color: #e7e7e7; 
+  color: black;
+ 
+  border: none;
+  
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  top: 50%;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float:right;
+ }
+
+  @media(max-width:767px){
+     
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 0.01fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "nav nav nav nav"
+          "main main main main"
+          "main main main main";
+      }
+      .nav { grid-area: nav; }
+      .main { grid-area: main; }
+      .welcome-img{
+        width: auto;
+        height: auto;
+      }
+      h1 span { 
+        font-size: 15px;
+    } 
+    .desk-nav{
+        display: none;
+    }
+   #burger{
+       display: block;
+   }
+   .overlay a{
+    font-size: 20px;
+  }
+  .overlay .closebtn{
+    font-size: 40px;
+    top:15px;
+    left:35px;
+}
+  .burger{
+    font-size:45px;
+    }
+#overlay{
+  width: 100%;
+}
+    
+  }

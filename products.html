@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styling/styleP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body onhashchange = "showSavedCart()">
+    <div class="grid-container">
+      <div id="overlay">
+        <button id="close-cart" onclick="off()">Close</button>
+        <div id="text"><hr>Your Cart<hr>
+          <div id="empty-txt">No items in cart yet.</div>
+          <div class="cart-container">
+            <ul class="cart-list"></ul>
+            <div class="total-price"><hr>Total Price:
+              <p id="total-price">0</p><hr>
+              <button id="buy" style="display: none;" >Buy</button>
+            </div>
+            
+        </div>
+        </div>
+     </div>
+     <div class="overlay-cart"></div>
+        <div class="overlay"> 
+            <!-- close button nav -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            
+            
+                <div class="overlay-content">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li> <a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="nav">
+            <span class="burger" id="burger" onclick="openNav()">&#9776;</span>
+            <div class="desk-nav">
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            </div>
+            <span class="cart" onclick="on()">Cart<i class="fas fa-shopping-cart"></i></span>
+        </div>
+        <div class="main">
+            
+           
+                <div class="container">
+                  <h2 >Books for Sale</h2><br>
+                  
+                  
+                    <div class="book-sale">
+                      <div class="cover">
+                        <img src="images/hp1.jpg">
+                      </div>
+                      <div class="description">
+                        <h5 class="title">Harry Potter and the Philosopher's Stone</h5><br>
+                          <span class="author">J.K. Rowling</span><br>
+                          <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
+                          <blockquote cite="Hermione Granger">
+                            <q>Are you sure that’s a real spell? Well, it’s not very good, is it?</q> <br>
+                            -Hermione Granger
+                        </blockquote><br>
+                          <p class="price">7.99</p>
+                          <br>
+                          <br>
+                         
+                            <label for="quantity">Quantity :</label>
+                            <input type="number" class="quantity" name="quantity" min="1" >
+                            
+                          <p><button class="cart-btn">Add to Cart</button></p>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="book-sale">
+                        <div class="cover">
+                          <img src="images/hp2.jpg">
+                        </div>
+                        <div class="description">
+                          <h5 class="title1">Harry Potter and the Chamber of Secrets</h5><br>
+                            <span class="author">J.K. Rowling</span>
+                            <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
+                            <blockquote cite="Harry Potter">
+                                <q>I'll be in my bedroom, making no noise and pretending I'm not there.</q> <br>
+                                -Harry Potter
+                            </blockquote><br>
+                          <p class="price1">8.99</p>
+                          <br>
+                          
+                         
+                          <label for="quantity">Quantity :</label>
+                          <input type="number" class="quantity1" name="quantity" min="1" >
+                            
+                          <p><button  class="cart-btn1">Add to Cart</button></p></p>
+                        </div>
+                      </div>
+                      <div class="book-sale">
+                        <div class="cover">
+                          <img src="images/hp3.jpg">
+                        </div>
+                        <div class="description">
+                           <p> <h5 class="title2">Harry Potter and the Prisoner of Azkaban</h5><br>
+                            <span class="author">J.K. Rowling</span>
+                            <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
+                            <blockquote cite="Harry Potter">
+                                <q>I solemnly swear that I am up to no good.</q> <br>
+                                -Harry Potter
+                            </blockquote><br>
+                          <p class="price2">9.99</p>
+                          <br>
+                          <br>
+                          
+                          <label for="quantity">Quantity :</label>
+                          <input type="number" class="quantity2" name="quantity" min="1" >
+                            
+                          <p><button  class="cart-btn2">Add to Cart</button></p></p>
+                        </div>
+                      </div>
+                      <div class="book-sale">
+                        <div class="cover">
+                          <img src="images/hp4.jpg">
+                        </div>
+                        <div class="description">
+                          <p><h5 class="title3"> Harry Potter and the Goblet of Fire</h5><br>
+                            <span class="author">J.K. Rowling</span>
+                            <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
+                            <blockquote cite="Albus Dumbledore">
+                                <q>Numbing the pain for a while will make it worse when you finally feel it.</q> <br>
+                                -Albus Dumbledore
+                            </blockquote><br>
+                          <p class="price3">19.99</p>
+                          <br>
+                          
+                          <label for="quantity">Quantity :</label>
+                          <input type="number" class="quantity3" name="quantity" min="1" >
+                            
+                          <p><button  class="cart-btn3">Add to Cart</button></p></p>
+                        </div>
+                      </div>
+              
+                </div>
+                </div>
+              </div>
+        
+      </div>
+      <script src="js/app.js"></script>
+</body>
+</html>
