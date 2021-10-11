@@ -76,8 +76,18 @@
     margin-bottom: 16px;
     
   }
+  input[type=textarea], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    
+  }
   
-  input[type=submit] {
+  button {
     background-color: gray;
     color: white;
     padding: 12px 20px;

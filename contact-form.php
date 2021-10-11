@@ -57,26 +57,8 @@
                     <source media="(max-width: 768px)" srcset="images/books.jpg">
                     <img src="./images/books-1.jpg" alt="books" height="500" width="100%" >
                 </picture>
-            </div>
-            <h1><span>CONTACT US</span></h1>
-            <div class="container">
-                <form action="contact-form.php" method="post">
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="fname" placeholder="First name.." pattern="^([^0-9]*)$" required>
-              
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lname" placeholder="Last name.." pattern="^([^0-9]*)$" required>
-
-                  <label for="lname">Email</label>
-                  <input type="text" id="email" name="email" placeholder="Email.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-              
-              
-                  <label for="message">Message</label>
-                  <input type="textarea" id="message" name="message" placeholder="Write something.." style="height:200px"  required>
-              
-                  <button type="submit"  style="margin-left:15vh;">Send</button>
-                </form>
-              </div>
+                 <h3 style="text-align:center; margin-top:10vh;">Thank you for your message! We will contact you soon! </h3>
+                
               </div>
         </div>
     </div>
@@ -84,3 +66,15 @@
       <script src="js/app2.js"></script>
 </body>
 </html>
+
+<?php
+$fname=$_POST["fname"];
+$lname=$_POST["lname"];
+$email=$_POST["email"];
+$message=$_POST["message"];
+
+  $file=fopen("data/form-data.txt","a");
+  fwrite($file," ".date("Y/m/d")."-".$lname." ".$fname."(".$email.") sent a message to info@bookstore.gr. Message: ".$message."\n");
+  fclose($file);
+
+?>

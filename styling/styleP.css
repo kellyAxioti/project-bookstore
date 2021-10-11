@@ -113,11 +113,26 @@
     color: #f1f1f1;
 }
 
+#banner {
+  position: fixed;
+  top: 40px;
+  
+  background:black;
+  color: rgb(252, 13, 13) ;
+  padding: 14px 16px;
+  width:100%; 
+  margin: 0 auto;
+  text-align: center;
+}
+
+#banner_contents {
+  width: 800px;
+}
 
 #overlay {
   position: fixed;
   display: none;
-  width: 30%;
+  width: 50%;
   height: 100%;
   top: 0;
   
@@ -230,7 +245,8 @@
   .book-sale .author {
     font-size: 15px;
   }
-  .price , .price1, .price2 , .price3{
+  .price , .price1 , .price2, .price3{
+    display: inline;
     color: grey;
     font-size: 22px;
     text-align: center;

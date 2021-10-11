@@ -7,8 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styling/styleP.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
 </head>
-<!-- <body onhashchange = "showSavedCart()"> -->
+
   <body>
     <div class="grid-container">
       <div id="overlay">
@@ -16,10 +17,12 @@
         <div id="text"><hr>Your Cart<hr>
           <div id="empty-txt">No items in cart yet.</div>
           <div class="cart-container">
+            <ul class="cart-list2"></ul>
             <ul class="cart-list"></ul>
             <div class="total-price"><hr>Total Price:
               <p id="total-price">0</p><hr>
-              <button id="buy" style="display: none;" >Buy</button>
+              <p id="total-price-msg"></p><hr>
+              <button id="buy" style="display: none;"  onclick="Endorser()">Buy</button>
             </div>
             
         </div>
@@ -50,10 +53,16 @@
             <a href="contact.html">Contact</a>
             </div>
             <span class="cart" onclick="on()">Cart<i class="fas fa-shopping-cart"></i></span>
+        </div> 
+        <div id="banner">
+            <div id="banner-content">
+          SPECIAL OFFER! Buy books for more than 100&euro;, save 10% off!
+            </div>
         </div>
-        <div class="main">
-            
            
+        <div class="main">
+          <p id="demo"></p>
+         
                 <div class="container">
                   <h2 >Books for Sale</h2><br>
                   
@@ -68,11 +77,12 @@
                           <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
                           <blockquote cite="Hermione Granger">
                             <q>Are you sure that’s a real spell? Well, it’s not very good, is it?</q> <br>
-                            -Hermione Granger
+                             -Hermione Granger
                         </blockquote><br>
-                          <p class="price">7.99</p> <h7 class="price" >&euro;</h7> 
+                        <br>
+                          <p class="price">7.99 </p> <h7  class="price">&euro;</h7> 
                           <br>
-                          <br>
+                         <br>
                          
                             <label for="quantity">Quantity :</label>
                             <input type="number" class="quantity" name="quantity" min="1" >
@@ -93,7 +103,8 @@
                                 <q>I'll be in my bedroom, making no noise and pretending I'm not there.</q> <br>
                                 -Harry Potter
                             </blockquote><br>
-                          <p class="price1">8.99</p><h7 class="price">&euro;</h7>
+                          <p class="price1">8.99 </p><h7 class="price">&euro;</h7>
+                          <br>
                           <br>
                           
                          
@@ -108,14 +119,16 @@
                           <img src="images/hp3.jpg">
                         </div>
                         <div class="description">
-                           <p> <h5 class="title2">Harry Potter and the Prisoner of Azkaban</h5><br>
+                           <p> <h5 class="title2">Harry Potter and the Prisoner of Azkaban </h5><br>
                             <span class="author">J.K. Rowling</span>
                             <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
                             <blockquote cite="Harry Potter">
                                 <q>I solemnly swear that I am up to no good.</q> <br>
                                 -Harry Potter
+                                <br>
+                                <br>
                             </blockquote><br>
-                          <p class="price2">9.99</p><h7 class="price">&euro;</h7>
+                          <p class="price2">9.99 </p><h7 class="price">&euro;</h7>
                           <br>
                           <br>
                           
@@ -130,14 +143,15 @@
                           <img src="images/hp4.jpg">
                         </div>
                         <div class="description">
-                          <p><h5 class="title3"> Harry Potter and the Goblet of Fire</h5><br>
+                          <p><h5 class="title3">Harry Potter and the Goblet of Fire</h5><br>
                             <span class="author">J.K. Rowling</span>
                             <p class="summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque saepe, quidem ab consequatur id illum dolorum tenetur facilis quis ipsam fugiat nihil commodi doloribus incidunt illo dolores a quaerat omnis!</p><br>
                             <blockquote cite="Albus Dumbledore">
                                 <q>Numbing the pain for a while will make it worse when you finally feel it.</q> <br>
                                 -Albus Dumbledore
                             </blockquote><br>
-                          <p class="price3">19.99</p><h7 class="price">&euro;</h7>
+                          <p class="price3">19.99 </p><h7 class="price">&euro;</h7>
+                          <br>
                           <br>
                           
                           <label for="quantity">Quantity :</label>
